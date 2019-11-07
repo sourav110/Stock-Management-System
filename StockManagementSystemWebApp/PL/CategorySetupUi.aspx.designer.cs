@@ -40,12 +40,21 @@ namespace StockManagementSystemWebApp.PL {
         protected global::System.Web.UI.WebControls.Button saveButton;
         
         /// <summary>
-        /// companyGridView control.
+        /// messageLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView companyGridView;
+        protected global::System.Web.UI.WebControls.Label messageLabel;
+        
+        /// <summary>
+        /// categoryGridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView categoryGridView;
     }
 }

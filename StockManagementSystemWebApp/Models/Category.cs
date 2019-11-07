@@ -12,6 +12,10 @@ namespace StockManagementSystemWebApp
             CategoryId = categoryId;
             CategoryName = categoryName;
         }
+        public Category(string categoryName)
+        {
+            CategoryName = categoryName;
+        }
 
         public int CategoryId { set; get; }
         public string CategoryName { set; get; }
