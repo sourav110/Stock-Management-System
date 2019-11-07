@@ -15,6 +15,5 @@ namespace StockManagementSystemWebApp
 
         public int CategoryId { set; get; }
         public string CategoryName { set; get; }
-
     }
 }
