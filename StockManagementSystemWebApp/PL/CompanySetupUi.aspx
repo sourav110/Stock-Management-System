@@ -9,7 +9,9 @@
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ControlToValidate="inputCompanyName" ForeColor="red" ErrorMessage="Name Can't be empty"></asp:RequiredFieldValidator>
     </div>
 
-    <asp:Button ID="saveButton" class="btn btn-primary" runat="server" Text="Save" />
+    <asp:Button ID="saveButton" class="btn btn-primary" runat="server" Text="Save" OnClick="saveButton_Click" />
+    <br />
+    <asp:Label ID="messageLabel" runat="server"></asp:Label>
     <br />
 
     <asp:GridView ID="companyGridView" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None">

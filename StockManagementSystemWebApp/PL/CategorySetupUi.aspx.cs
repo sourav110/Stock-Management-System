@@ -17,6 +17,7 @@ namespace StockManagementSystemWebApp.PL
         {
             ShowAllCatagories();
         }
+
         CategoryManager categoryManager = new CategoryManager();
 
         protected void saveButton_Click(object sender, EventArgs e)
@@ -26,6 +27,7 @@ namespace StockManagementSystemWebApp.PL
 
             string message = categoryManager.SaveCategory(category);
             messageLabel.Text = message;
+
             if (message == "Category saved successfully")
             {
                 messageLabel.ForeColor = Color.Green;
