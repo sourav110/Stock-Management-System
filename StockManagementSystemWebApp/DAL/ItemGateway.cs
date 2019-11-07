@@ -49,5 +49,31 @@ namespace StockManagementSystemWebApp.DAL
 
             return false;
         }
+
+        public List<Item> GetAllItemsFromDB()
+        {
+            List<Item> items = new List<Item>();
+
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            string query = "SELECT * FROM Item_tbl";
+            SqlCommand command = new SqlCommand(query, connection);
+            connection.Open();
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                int itemId = Convert.ToInt32(reader["ItemId"]);
+                string itemName = reader["ItemName"].ToString();
+                Item item = new Item(itemName);
+
+                items.Add(item);
+            }
+
+            reader.Close();
+            connection.Close();
+
+            return items;
+        }
     }
 }

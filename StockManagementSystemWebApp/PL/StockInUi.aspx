@@ -15,12 +15,12 @@
 
     <div class="form-group">
         <label for="inputReorderLevel">Reorder Level</label>
-        <input type="text" class="form-control" id="inputReorderLevel" runat="server" placeholder="0" />
+        <input type="text" class="form-control" id="inputReorderLevel" runat="server" visible="True" />
     </div>
 
     <div class="form-group">
         <label for="inputAvailableQuantity">Available Quantity</label>
-        <input type="text" class="form-control" id="inputAvailableQuantity" runat="server" placeholder="0" />
+        <input type="text" class="form-control" id="inputAvailableQuantity" runat="server"/>
     </div>
 
     <div class="form-group">
@@ -29,5 +29,8 @@
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ControlToValidate="inputStockInQuantity" ForeColor="red" ErrorMessage="Quantity Can't be empty"></asp:RequiredFieldValidator>
     </div>
 
-    <asp:Button ID="saveButton" class="btn btn-primary" runat="server" Text="Save" />
+    <asp:Button ID="saveButton" class="btn btn-primary" runat="server" Text="Save" OnClick="saveButton_Click" />
+
+    <br />
+    <asp:Label ID="messageLabel" runat="server"></asp:Label>
 </asp:Content>

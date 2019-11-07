@@ -34,5 +34,10 @@ namespace StockManagementSystemWebApp.BLL
                 }
             }
         }
+
+        public List<Item> GetAllItems()
+        {
+            return itemGateway.GetAllItemsFromDB();
+        }
     }
 }
