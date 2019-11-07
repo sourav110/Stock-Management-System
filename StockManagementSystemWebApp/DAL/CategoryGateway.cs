@@ -63,8 +63,9 @@ namespace StockManagementSystemWebApp.DAL
 
             while (reader.Read())
             {
+                int categoryId = Convert.ToInt32(reader["CategoryId"]);
                 string categoryName = reader["CategoryName"].ToString();
-                Category category = new Category(categoryName);
+                Category category = new Category(categoryId, categoryName);
                 categories.Add(category);
             }
 

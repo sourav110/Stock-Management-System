@@ -8,15 +8,15 @@ using StockManagementSystemWebApp.Models;
 
 namespace StockManagementSystemWebApp.DAL
 {
-    public class CompanyGateway
+    public class ItemGateway
     {
         string connectionString = WebConfigurationManager.ConnectionStrings["SMSDB"].ConnectionString;
 
-        public bool IsCompanyExist(Company company)
+        public bool IsItemExist(Item item)
         {
             SqlConnection connection = new SqlConnection(connectionString);
 
-            string query = "SELECT * FROM Company_tbl WHERE CompanyName = '" + company.CompanyName + "'";
+            string query = "SELECT * FROM Item_tbl WHERE ItemName = '" + item.ItemName + "'";
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
 
@@ -32,11 +32,11 @@ namespace StockManagementSystemWebApp.DAL
             return false;
         }
 
-        public bool SaveCompany(Company company)
+        public bool SaveItem(Item item)
         {
             SqlConnection connection = new SqlConnection(connectionString);
 
-            string query = "INSERT INTO Company_tbl(CompanyName) VALUES('" + company.CompanyName + "')";
+            string query = "INSERT INTO Item_tbl(CategoryId, CompanyId, ItemName, ReorderLevel) VALUES("+item.CategoryId+", "+item.CompanyId+", '" + item.ItemName + "', "+item.ReorderLevel+" )";
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
             int rowEffect = command.ExecuteNonQuery();
@@ -48,31 +48,6 @@ namespace StockManagementSystemWebApp.DAL
             }
 
             return false;
-        }
-
-        public List<Company> GetAllCompaniesFromDB()
-        {
-            List<Company> companies = new List<Company>();
-
-            SqlConnection connection = new SqlConnection(connectionString);
-
-            string query = "SELECT * FROM Company_tbl";
-            SqlCommand command = new SqlCommand(query, connection);
-            connection.Open();
-            SqlDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
-            {
-                int companyId = Convert.ToInt32(reader["CompanyId"]);
-                string companyName = reader["CompanyName"].ToString();
-                Company company = new Company(companyId, companyName);
-                companies.Add(company);
-            }
-
-            reader.Close();
-            connection.Close();
-
-            return companies;
         }
     }
 }

@@ -21,9 +21,11 @@
 
     <div class="form-group">
         <label for="inputReorderLevel">Reorder Level</label>
-        <input type="text" class="form-control" id="inputReorderLevel" runat="server" placeholder="0" />
+        <input type="text" class="form-control" id="inputReorderLevel" runat="server" value="0" />
     </div>
 
-    <asp:Button ID="saveButton" class="btn btn-primary" runat="server" Text="Save" />
+    <asp:Button ID="saveButton" class="btn btn-primary" runat="server" Text="Save" OnClick="saveButton_Click" />
 
+    <asp:Label ID="messageLabel" runat="server"></asp:Label>
+    <br />
 </asp:Content>
