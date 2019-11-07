@@ -15,6 +15,7 @@ namespace StockManagementSystemWebApp.PL
     {
         CompanyManager companyManager = new CompanyManager();
         ItemManager itemManager = new ItemManager();
+        StockInManager stockInManager = new StockInManager();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -43,7 +44,30 @@ namespace StockManagementSystemWebApp.PL
 
         protected void saveButton_Click(object sender, EventArgs e)
         {
+            int companyId = Convert.ToInt32(ddlCompany.SelectedValue);
+            int itemId = Convert.ToInt32(ddlItem.SelectedValue);
+            int stockInQuantity = Convert.ToInt32(inputStockInQuantity.Value);
 
+            StockIn stockIn = new StockIn(companyId, itemId, stockInQuantity);
+
+            string message = stockInManager.SaveStockIn(stockIn);
+            messageLabel.Text = message;
+
+            if (message == "Stock in saved successfully")
+            {
+                messageLabel.ForeColor = Color.Green;
+            }
+            else
+            {
+                messageLabel.ForeColor = Color.Red;
+            }
+
+            ClearField();
+        }
+
+        private void ClearField()
+        {
+            inputStockInQuantity.Value = String.Empty;
         }
     }
 }
