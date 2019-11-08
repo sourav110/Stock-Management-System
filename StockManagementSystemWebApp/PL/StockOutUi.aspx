@@ -29,7 +29,10 @@
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ControlToValidate="inputStockOutQuantity" ForeColor="red" ErrorMessage="Quantity Can't be empty"></asp:RequiredFieldValidator>
     </div>
 
-    <asp:Button ID="addButton" class="btn btn-primary" runat="server" Text="Add" />
+    <asp:Button ID="addButton" class="btn btn-primary" runat="server" Text="Add" OnClick="addButton_Click" />
+    <br />
+
+    <asp:Label ID="messageLabel" runat="server"></asp:Label>
     <br />
 
     <asp:GridView ID="companyGridView" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None">
@@ -75,7 +78,7 @@
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
     <br />
-    <asp:Button ID="sellButton" class="btn btn-primary" runat="server" Text="Sell" />
+    <asp:Button ID="sellButton" class="btn btn-primary" runat="server" Text="Sell" OnClick="sellButton_Click" />
 &nbsp;<asp:Button ID="damageButton" class="btn btn-danger" runat="server" Text="Damage" />
 &nbsp;<asp:Button ID="lostButton" class="btn btn-warning" runat="server" Text="Lost" />
 
