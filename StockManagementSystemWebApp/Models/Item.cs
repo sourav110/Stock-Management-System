@@ -20,6 +20,11 @@ namespace StockManagementSystemWebApp.Models
             ReorderLevel = reorderLevel;
         }
 
+        public Item(int categoryId, int companyId, string itemName, int reorderLevel, int quantity) : this(categoryId, companyId, itemName, reorderLevel)
+        {
+            Quantity = quantity;
+        }
+
         public Item(int itemId, int categoryId, int companyId, string itemName, int reorderLevel, int quantity)
         {
             ItemId = itemId;

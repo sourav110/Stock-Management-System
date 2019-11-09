@@ -182,11 +182,13 @@
     <Compile Include="BLL\ItemManager.cs" />
     <Compile Include="BLL\StockInManager.cs" />
     <Compile Include="BLL\StockOutManager.cs" />
+    <Compile Include="BLL\UserManager.cs" />
     <Compile Include="DAL\CategoryGateway.cs" />
     <Compile Include="DAL\CompanyGateway.cs" />
     <Compile Include="DAL\ItemGateway.cs" />
     <Compile Include="DAL\StockInGateway.cs" />
     <Compile Include="DAL\StockOutGateway.cs" />
+    <Compile Include="DAL\UserGateway.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Company.cs" />
     <Compile Include="Contact.aspx.cs">

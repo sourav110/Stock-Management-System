@@ -69,6 +69,7 @@ namespace StockManagementSystemWebApp.PL
         private void ClearField()
         {
             inputItemName.Value = String.Empty;
+            inputReorderLevel.Value = String.Empty;
         }
     }
 }

@@ -73,6 +73,8 @@ namespace StockManagementSystemWebApp.DAL
             reader.Close();
             connection.Close();
 
+            //int itemQuantity = items.Count;
+
             return items;
         }
     }

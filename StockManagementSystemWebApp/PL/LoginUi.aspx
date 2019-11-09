@@ -14,6 +14,8 @@
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Display="Dynamic" ControlToValidate="inputPassword" ForeColor="red" ErrorMessage="Enter valid password"></asp:RequiredFieldValidator>
     </div>
 
-    <asp:Button ID="saveButton" class="btn btn-primary" runat="server" Text="Save" />
+    <asp:Button ID="saveButton" class="btn btn-primary" runat="server" Text="Login" OnClick="saveButton_Click" />
+    <br />
+    <asp:Label ID="messageLabel" runat="server"></asp:Label>
 
 </asp:Content>
