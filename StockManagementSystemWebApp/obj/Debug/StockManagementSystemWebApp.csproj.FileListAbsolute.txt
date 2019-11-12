@@ -69,3 +69,5 @@ E:\Projects\StockManagementSystemWebApp\StockManagementSystemWebApp\obj\Debug\St
 E:\Projects\StockManagementSystemWebApp\StockManagementSystemWebApp\obj\Debug\StockManagementSystemWebApp.csproj.CopyComplete
 E:\Projects\StockManagementSystemWebApp\StockManagementSystemWebApp\obj\Debug\StockManagementSystemWebApp.dll
 E:\Projects\StockManagementSystemWebApp\StockManagementSystemWebApp\obj\Debug\StockManagementSystemWebApp.pdb
+E:\Projects\StockManagementSystemWebApp\StockManagementSystemWebApp\bin\itextsharp.dll
+E:\Projects\StockManagementSystemWebApp\StockManagementSystemWebApp\bin\itextsharp.xml

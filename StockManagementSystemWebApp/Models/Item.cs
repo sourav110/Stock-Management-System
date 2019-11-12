@@ -7,9 +7,20 @@ namespace StockManagementSystemWebApp.Models
 {
     public class Item
     {
+        public Item()
+        {
+        }
+
         public Item(string itemName)
         {
             ItemName = itemName;
+        }
+
+        public Item(int itemId, int companyId, int quantity)
+        {
+            ItemId = itemId;
+            CompanyId = companyId;
+            Quantity = quantity;
         }
 
         public Item(int categoryId, int companyId, string itemName, int reorderLevel)

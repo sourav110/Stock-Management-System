@@ -42,4 +42,7 @@
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
 
+    <br />
+    <asp:Button ID="printReportButton" runat="server" class="btn btn-primary"  Text="Print Report" OnClick="printReportButton_Click"/>
+
 </asp:Content>

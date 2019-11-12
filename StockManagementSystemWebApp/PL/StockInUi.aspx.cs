@@ -16,6 +16,7 @@ namespace StockManagementSystemWebApp.PL
         CompanyManager companyManager = new CompanyManager();
         ItemManager itemManager = new ItemManager();
         StockInManager stockInManager = new StockInManager();
+        private object stockgateway;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -46,23 +47,58 @@ namespace StockManagementSystemWebApp.PL
         {
             int companyId = Convert.ToInt32(ddlCompany.SelectedValue);
             int itemId = Convert.ToInt32(ddlItem.SelectedValue);
-            int stockInQuantity = Convert.ToInt32(inputStockInQuantity.Value);
+            int quantity = Convert.ToInt32(inputStockInQuantity.Value);
 
-            StockIn stockIn = new StockIn(companyId, itemId, stockInQuantity);
+            Item item = new Item(itemId, companyId, quantity);
 
-            string message = stockInManager.SaveStockIn(stockIn);
-            messageLabel.Text = message;
 
-            if (message == "Stock in saved successfully")
-            {
-                messageLabel.ForeColor = Color.Green;
-            }
-            else
-            {
-                messageLabel.ForeColor = Color.Red;
-            }
+
+
+
+
+
+            //StockIn stockIn = new StockIn(companyId, itemId, stockInQuantity);
+
+            //string message = stockInManager.SaveStockIn(stockIn);
+            //messageLabel.Text = message;
+
+            //if (message == "Stock in saved successfully")
+            //{
+            //    messageLabel.ForeColor = Color.Green;
+            //}
+            //else
+            //{
+            //    messageLabel.ForeColor = Color.Red;
+            //}
 
             ClearField();
+        }
+
+        private void StockInQuantity(Item item)
+        {
+            //StockManager stockManager = new StockManager();
+            //string message = stockManager.StockInQuantity(item);
+            //messageLabel.Text = message;
+            //if (message == "Successfully stocked in.")
+            //{
+            //    messageLabel.ForeColor = Color.Green;
+            //}
+            //else
+            //{
+            //    messageLabel.ForeColor = Color.Red;
+            //}
+        }
+
+        public string StockOutQuantity(Item item)
+        {
+            //if (stockgateway.StockOutItemQuantity(item))
+            //{
+            //    return "Successfully stocked out items.";
+            //}
+            //else
+            {
+                return "Cannot stockin out items.";
+            }
         }
 
         private void ClearField()

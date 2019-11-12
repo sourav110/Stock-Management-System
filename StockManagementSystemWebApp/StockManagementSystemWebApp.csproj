@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -181,11 +184,13 @@
     <Compile Include="BLL\CompanyManager.cs" />
     <Compile Include="BLL\ItemManager.cs" />
     <Compile Include="BLL\StockInManager.cs" />
+    <Compile Include="BLL\StockManager.cs" />
     <Compile Include="BLL\StockOutManager.cs" />
     <Compile Include="BLL\UserManager.cs" />
     <Compile Include="DAL\CategoryGateway.cs" />
     <Compile Include="DAL\CompanyGateway.cs" />
     <Compile Include="DAL\ItemGateway.cs" />
+    <Compile Include="DAL\StockGateway.cs" />
     <Compile Include="DAL\StockInGateway.cs" />
     <Compile Include="DAL\StockOutGateway.cs" />
     <Compile Include="DAL\UserGateway.cs" />
