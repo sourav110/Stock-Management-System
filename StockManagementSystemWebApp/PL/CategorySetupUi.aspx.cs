@@ -112,7 +112,6 @@ namespace StockManagementSystemWebApp.PL
             Response.Write(pdfDocument);
             Response.Flush();
             Response.End();
-
         }
     }
 }
